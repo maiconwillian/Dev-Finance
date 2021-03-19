@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <header id="logo">
-        <img src="./img/logo.svg" alt=" Logo Dev Finance">
+    <header>
+        <img class="logo" src="./img/logo.svg" alt=" Logo Dev Finance">
     </header>
 
     <main class="container">
@@ -24,7 +24,7 @@
             <div class="card">
                 <h3>
                     <span>Entradas</span>
-                    <img src="./img/income.svg" alt="Image de Entrada">
+                    <img   src="./img/income.svg" alt="Image de Entrada">
                 </h3>
                 <p>R$ 5.000,00</p>
             </div>
@@ -49,9 +49,12 @@
          </section>
 
          <section id="transaction">
+             
             <h2 class="sr-only">Transações</h2>
 
-              <a href="#" class="button new"> + Nova Transação</a>
+
+            
+              <a href="#" onclick="Modal.open()" class="button new"> + Nova Transação</a>
 
             <table id="data-table">
                 <thead>
@@ -85,13 +88,14 @@
             </table>
 
          </section>
-        
-     </main>
+       </main> 
+     
 
-     <div class="modal-overlay active">
+     <div class="modal-overlay">
         <div class="modal">
             <div id="form">
                 <h2>Nova Transação</h2>
+               
                 <form action="">
                     <div class="input-group">
                         <label for="description" class="sr-only">Descrição</label>
@@ -102,6 +106,18 @@
                         <label for="amount" class="sr-only">Valor</label>
                         <input type="number" id='amount' name="amount" placeholder="0,00" step="0.01"/>
                         <small class="help"> Use o sinal - (negativo) para despesas e,(vírgula) para casas decimais</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="date" class="sr-only">Data</label>
+                        <input type="date" id='date' name="date" placeholder="01/01/2021" step="0.01"/>  
+                    </div>
+
+                    <div class="input-group actions"> 
+                        <a href="#"  onclick="Modal.close()" class="button cancel"> Cancelar</a>
+                        <button>Salvar</button>
+                    </div>
+
 
                 </form>
             </div>
@@ -111,6 +127,8 @@
     <footer id="rodape">
         <p>Dev.finance$</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
