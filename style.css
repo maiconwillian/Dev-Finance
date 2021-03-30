@@ -264,7 +264,7 @@ input {
     
 }
 
-.input-group small{
+.input-group .help{
     opacity: 0.4;
 
 }
