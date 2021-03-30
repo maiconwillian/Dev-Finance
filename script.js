@@ -67,8 +67,13 @@ const Transaction = {
               return expense;
       },
   total() {
-
-           return Transaction.incomes() + Transaction.expenses();
+   let total =Transaction.incomes() + Transaction.expenses();
+    if(total < 0){
+    document.querySelector('div.card.total').style.background='red';
+    return total;  
+    }else
+    document.querySelector('div.card.total').style.background='#49AA26';
+    return total;     
       }
 }
 
