@@ -229,6 +229,7 @@ td.expense {
     justify-content: center;
     opacity: 0;
     visibility: hidden;
+    z-index: 999;
 }
 .modal-overlay.active{
     opacity: 1;
@@ -240,6 +241,9 @@ td.expense {
     background: #f0f2f5;
     padding: 2.4rem;
     border-radius: 0.25rem;
+    position: relative;
+    z-index: 1;
+
   
     
     
